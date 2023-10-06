@@ -1,0 +1,22 @@
+<input type="number" id="input_number" onchange="updateHTML(this.value);" /><br/>
+
+<script>
+    function updateHTML() {
+        var num_iterate = document.getElementById("input_number").value;
+        var embed = "";
+        for (var i = 0; i < num_iterate; i++) {
+            embed += "<div><span id='label" + i + "'>label" + i + "</span> : <input type='text'/></div>";
+        }
+        document.getElementById("content").innerHTML = embed;
+    }
+
+    function updateHTML2(num_iterate) {
+        var embed = "";
+        for (var i = 0; i < num_iterate; i++) {
+            embed += "<div><span id='label" + i + "'>label" + i + "</span> : <input type='text'/></div>";
+        }
+        document.getElementById("content").innerHTML = embed;
+    }
+</script>
+<input type="number" id="input_number" onchange="updateHTML(this.value);" /><br/>
+<div id="content"></div>
